@@ -14,4 +14,7 @@ migrate:
 	uv run manage.py migrate
 collectstatic:
 	uv run python manage.py collectstatic --noinput
-
+make_mess:
+	uv run django-admin makemessages -l ru
+compile_mess:
+	uv run django-admin compilemessages -l ru
