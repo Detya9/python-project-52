@@ -1,11 +1,11 @@
 {% extends "layout.html" %}
 
-{% block title %}Task Manager{% endblock %}
+{% load i18n %}
+
+{% block title %}{% translate 'Task Manager' %}{% endblock %}
 
 {% block content %}
 
-<div class="container wrapper flex-grow-1">
-  <h1 class="my-4"></h1>
   <div class="card">
     <div class="card-body p-5 bg-light">
       <div class="display-4">Hello, guest!</div>
@@ -14,7 +14,6 @@
         <a class="btn btn-primary btn-lg" href="https://github.com/Detya9/python-project-52">Project repository</a>
     </div>
   </div>
-</div>
 
 {% endblock %}
 

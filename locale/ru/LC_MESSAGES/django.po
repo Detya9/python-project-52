@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-10 12:29+0300\n"
+"POT-Creation-Date: 2025-04-14 23:33+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,7 +19,8 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
-#: task_manager/templates/layout.html:17
+
+#: task_manager/templates/index.html:5 task_manager/templates/layout.html:17
 msgid "Task Manager"
 msgstr "Менеджер задач"
 
@@ -27,14 +28,48 @@ msgstr "Менеджер задач"
 msgid "Users"
 msgstr "Пользователи"
 
-#: task_manager/templates/layout.html:27
+#: task_manager/templates/layout.html:28
+msgid "Statuses"
+msgstr "Статусы"
+
+#: task_manager/templates/layout.html:31
+msgid "Labels"
+msgstr "Метки"
+
+#: task_manager/templates/layout.html:34
+msgid "Tasks"
+msgstr "Задачи"
+
+#: task_manager/templates/layout.html:37
+msgid "Logout"
+msgstr "Выход"
+
+#: task_manager/templates/layout.html:41
 msgid "Login"
 msgstr "Вход"
 
-#: task_manager/templates/layout.html:30
+#: task_manager/templates/layout.html:44
+#: task_manager/templates/users/user_create.html:6
+#: task_manager/templates/users/user_create.html:9
 msgid "Registration"
 msgstr "Регистрация"
 
-#: task_manager/templates/layout.html:41
+#: task_manager/templates/layout.html:58
 msgid "My GitHub"
 msgstr "Мой GitHub"
+
+#: task_manager/templates/users/user_create.html:17
+msgid "Register"
+msgstr "Зарегистрировать"
+
+#: task_manager/users/models.py:8
+msgid "First Name"
+msgstr "Имя"
+
+#: task_manager/users/models.py:9
+msgid "Last Name"
+msgstr "Фамилия"
+
+#: task_manager/users/views.py:22
+msgid "User was successfully registered"
+msgstr "Пользователь успешно зарегистрирован"
