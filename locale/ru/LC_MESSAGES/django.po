@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-14 23:33+0300\n"
+"POT-Creation-Date: 2025-04-15 22:10+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,6 +25,8 @@ msgid "Task Manager"
 msgstr "Менеджер задач"
 
 #: task_manager/templates/layout.html:24
+#: task_manager/templates/users/user_list.html:5
+#: task_manager/templates/users/user_list.html:8
 msgid "Users"
 msgstr "Пользователи"
 
@@ -40,27 +42,41 @@ msgstr "Метки"
 msgid "Tasks"
 msgstr "Задачи"
 
-#: task_manager/templates/layout.html:37
+#: task_manager/templates/layout.html:39
 msgid "Logout"
 msgstr "Выход"
 
-#: task_manager/templates/layout.html:41
+#: task_manager/templates/layout.html:44 task_manager/views.py:17
 msgid "Login"
 msgstr "Вход"
 
-#: task_manager/templates/layout.html:44
-#: task_manager/templates/users/user_create.html:6
-#: task_manager/templates/users/user_create.html:9
+#: task_manager/templates/layout.html:47 task_manager/users/views.py:27
 msgid "Registration"
 msgstr "Регистрация"
 
-#: task_manager/templates/layout.html:58
+#: task_manager/templates/layout.html:62
 msgid "My GitHub"
 msgstr "Мой GitHub"
 
-#: task_manager/templates/users/user_create.html:17
-msgid "Register"
-msgstr "Зарегистрировать"
+#: task_manager/templates/users/user_list.html:16
+msgid "Username"
+msgstr "Имя пользователя"
+
+#: task_manager/templates/users/user_list.html:17
+msgid "Full name"
+msgstr "Полное имя"
+
+#: task_manager/templates/users/user_list.html:18
+msgid "Creation date"
+msgstr "Дата создания"
+
+#: task_manager/templates/users/user_list.html:30
+msgid "Update"
+msgstr "Изменить"
+
+#: task_manager/templates/users/user_list.html:31
+msgid "Delete"
+msgstr "Удалить"
 
 #: task_manager/users/models.py:8
 msgid "First Name"
@@ -70,6 +86,22 @@ msgstr "Имя"
 msgid "Last Name"
 msgstr "Фамилия"
 
-#: task_manager/users/views.py:22
+#: task_manager/users/views.py:23
 msgid "User was successfully registered"
 msgstr "Пользователь успешно зарегистрирован"
+
+#: task_manager/users/views.py:28
+msgid "Register"
+msgstr "Зарегистрировать"
+
+#: task_manager/views.py:16
+msgid "You were logged in"
+msgstr "Вы залогинены"
+
+#: task_manager/views.py:17
+msgid "Log in"
+msgstr "Войти"
+
+#: task_manager/views.py:23
+msgid "You were logged out"
+msgstr "Вы разлогинены"
