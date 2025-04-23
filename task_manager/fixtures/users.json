@@ -1,0 +1,25 @@
+[
+  {
+    "model": "users.user",
+    "pk": 1,
+    "fields":  {
+      "password": "Carbonara123",
+      "username": "Italyashka",
+      "date_joined": "2025-04-15T13:46:06.358Z",
+      "first_name": "Jannik",
+      "last_name": "Sinner"
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 2,
+    "fields": {
+      "password": "Croissant888",
+      "username": "Francuz",
+      "date_joined": "2025-04-16T14:10:33.833Z",
+      "first_name": "Gilles",
+      "last_name": "Simon"
+      }
+  }
+]
+

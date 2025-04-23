@@ -7,6 +7,7 @@ from django.utils.translation import gettext_lazy as _
 
 class CustomLoginRequiredMixin(LoginRequiredMixin):
     login_url = reverse_lazy('login')
+    redirect_field_name = ''    
 
     def dispatch(self, request, *args, **kwargs):
         if not request.user.is_authenticated:

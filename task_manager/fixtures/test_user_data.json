@@ -1,0 +1,24 @@
+{
+  "new": {
+    "first_name": "Grigor",
+    "last_name": "Dimitrov",
+    "username": "Bolgarin",
+    "password1": "Tarator457",
+    "password2": "Tarator457"
+  },
+  "duplicated": {
+    "first_name": "Lorenzo",
+    "last_name": "Musetti",
+    "username": "Italyashka",
+    "password1": "Bolognese99",
+    "password2": "Bolognese99"
+  },
+  "updated": {
+    "first_name": "Jannik",
+    "last_name": "Sinner",
+    "username": "TennisDestroyer",
+    "password1": "Alfredo43",
+    "password2": "Alfredo43"
+  }
+}
+
