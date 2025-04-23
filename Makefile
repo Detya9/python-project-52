@@ -10,8 +10,10 @@ fix:
 	uv run ruff check --fix
 render-start:
 	gunicorn task_manager.wsgi
+make_migrations:
+	uv run python manage.py makemigrations
 migrate:
-	uv run manage.py migrate
+	uv run python manage.py migrate
 collectstatic:
 	uv run python manage.py collectstatic --noinput
 make_mess:

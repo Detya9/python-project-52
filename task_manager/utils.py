@@ -21,3 +21,7 @@ def get_fixture_data(file_name):
 def get_test_user_data():
     return get_fixture_data('test_user_data.json')
 
+
+def get_test_status_data():
+    return get_fixture_data('test_status_data.json')
+

@@ -25,7 +25,7 @@
             </li>
             {% if user.is_authenticated %}
             <li class="nav-item">
-              <a class="nav-link text-warning" href="#">{% translate 'Statuses' %}</a>
+              <a class="nav-link text-warning" href="{% url 'status_list' %}">{% translate 'Statuses' %}</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-warning" href="#">{% translate 'Labels' %}</a>

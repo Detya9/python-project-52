@@ -1,0 +1,35 @@
+[
+  {
+    "model": "statuses.status",
+    "pk": 1,
+    "fields": {
+      "name": "Completed",
+      "created_at": "2025-04-23T13:18:08.477Z"
+    }
+  },
+  {
+    "model": "statuses.status",
+    "pk": 2,
+    "fields": {
+      "name": "In progress",
+      "created_at": "2025-04-23T13:18:16.775Z"
+    }
+  },
+  {
+    "model": "statuses.status",
+    "pk": 3,
+    "fields": {
+      "name": "New",
+      "created_at": "2025-04-23T13:18:43.421Z"
+    }
+  },
+  {
+    "model": "statuses.status",
+    "pk": 4,
+    "fields": {
+      "name": "Postponed",
+      "created_at": "2025-04-23T13:18:54.723Z"
+    }
+  }
+]
+
