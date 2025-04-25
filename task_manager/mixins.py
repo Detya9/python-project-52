@@ -1,5 +1,6 @@
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.db.models import ProtectedError
 from django.shortcuts import redirect
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
@@ -29,4 +30,30 @@ class CustomUserPassesTestMixin(UserPassesTestMixin):
                                       " to modify another user."))
             return redirect(reverse_lazy('users_list'))
         return super().dispatch(request, *args, **kwargs)
+
+
+class AuthorAccessMixin(UserPassesTestMixin):
+
+    def test_func(self):
+        return self.get_object().author == self.request.user
+
+    def dispatch(self, request, *args, **kwargs):
+        user_test_result = self.get_test_func()()
+        if not user_test_result:
+            messages.error(request, _("Task can be deleted only by author"))
+            return redirect(reverse_lazy('task_list'))
+        return super().dispatch(request, *args, **kwargs)
+
+
+class ErrorCatcherMixin:
+    error_message = ""
+    error_redirect_name = ""
+
+    def dispatch(self, request, *args, **kwargs):
+        try:
+            response = super().dispatch(request, *args, **kwargs)
+            return response
+        except ProtectedError:
+            messages.error(request, self.error_message)
+            return redirect(self.error_redirect_name)
 

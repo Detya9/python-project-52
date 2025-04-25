@@ -10,13 +10,13 @@
 
 {% block content %}
 <a class="btn btn-primary mb-3" href="{% url 'status_create' %}">{% translate 'Create status' %}</a>
-<table class="table table-striped">
-  <thead class="table-dark">
+<table class="table table-striped align-middle">
+  <thead class="table-dark align-middle">
     <tr>
       <th class="col-1">ID</th>
       <th class="col-7">{% translate 'Name' %}</th>
-      <th class="col-2">{% translate 'Creation date' %}</th>
-      <th class="col-2"></th>
+      <th class="col-3">{% translate 'Creation date' %}</th>
+      <th class="col-1"></th>
     </tr>
   </thead>
   <tbody>
@@ -26,8 +26,8 @@
       <td>{{ status.name }}</td>
       <td>{{ status.created_at|date:"d.m.Y H:i" }}</td>
       <td>
-        <a class="btn btn-success" href="{% url 'status_update' status.id %}" role="button">{% translate 'Update' %}</a>
-        <a class="btn btn-danger" href="{% url 'status_delete' status.id %}" role="button">{% translate 'Delete' %}</a>
+        <a class="btn btn-info btn-sm" href="{% url 'status_update' status.id %}" role="button">{% translate 'Update' %}</a>
+        <a class="btn btn-danger btn-sm" href="{% url 'status_delete' status.id %}" role="button">{% translate 'Delete' %}</a>
       </td>
     </tr>
   {% endfor %}

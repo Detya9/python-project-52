@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% load django_bootstrap5 %}
+{% load i18n %}
+
+{% block title %}{% translate 'Tasks' %}{% endblock %}
+
+{% block page_name %}
+{% translate 'Tasks' %}
+{% endblock %}
+
+{% block content %}
+<a class="btn btn-primary mb-3" href="{% url 'task_create' %}">{% translate 'Create task' %}</a>
+<div class="card mb-3">
+  <div class="card-body bg-light">
+    <form method="get" >
+      {% csrf_token %}
+      {% bootstrap_form filter.form %}
+      <input class="btn btn-primary" type="submit" value="{% translate 'Filter' %}">
+    </form>
+  </div>
+</div>
+<table class="table table-striped align-middle">
+  <thead class="table-dark align-middle">
+    <tr>
+      <th class="col-md-auto">ID</th>
+      <th class="col-md-auto">{% translate 'Name' %}</th>
+      <th class="col-md-auto">{% translate 'Status' %}</th>
+      <th class="col-md-auto">{% translate 'Author' %}</th>
+      <th class="col-md-auto">{% translate 'Executor' %}</th>
+      <th class="col-md-auto">{% translate 'Creation date' %}</th>
+      <th class="col-1"></th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for task in tasks %}
+    <tr>
+      <td >{{ task.id }}</td>
+      <td><a class="link" href="{% url 'task_info' task.id %}">{{ task.name }}</a></td>
+      <td>{{ task.status }}</td>
+      <td>{{ task.author }}</td>
+      <td>{{ task.executor }}</td>
+      <td>{{ task.created_at|date:"d.m.Y H:i" }}</td>
+      <td>
+        <a class="btn btn-info btn-sm" href="{% url 'task_update' task.id %}" role="button">{% translate 'Update' %}</a>
+        <a class="btn btn-danger btn-sm" href="{% url 'task_delete' task.id %}" role="button">{% translate 'Delete' %}</a>
+      </td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
+

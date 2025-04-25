@@ -6,6 +6,7 @@ from django.views.generic import CreateView, DeleteView, ListView, UpdateView
 from task_manager.mixins import (
     CustomLoginRequiredMixin,
     CustomUserPassesTestMixin,
+    ErrorCatcherMixin,
 )
 
 from .forms import CustomUserChangeForm, CustomUserCreationForm
@@ -39,10 +40,12 @@ class UserUpdateView(CustomLoginRequiredMixin, CustomUserPassesTestMixin,
 
 
 class UserDeleteView(CustomLoginRequiredMixin, CustomUserPassesTestMixin,
-                     SuccessMessageMixin, DeleteView):
+                     ErrorCatcherMixin, SuccessMessageMixin, DeleteView):
     model = User
     template_name = 'confirm_delete.html'
     success_url = reverse_lazy('users_list')
     success_message = _("User was successfully deleted")
     extra_context = {'title': _('Delete user')}
+    error_message = _("User can't be deleted, because it is in use")
+    error_redirect_name = reverse_lazy('users_list')
 
