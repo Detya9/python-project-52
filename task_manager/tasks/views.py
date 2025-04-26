@@ -19,7 +19,7 @@ class TaskListView(CustomLoginRequiredMixin, FilterView):
     filterset_class = TaskFilter
 
 
-class TaskInfoView(CustomLoginRequiredMixin, DetailView):
+class TaskDetailView(CustomLoginRequiredMixin, DetailView):
     model = Task
     template_name = 'tasks/task_info.html'
     context_object_name = 'task'

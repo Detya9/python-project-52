@@ -1,0 +1,23 @@
+{
+  "new": {
+    "name": "Final exam week",
+    "description": "3 different exams per week",
+    "status": 3,
+    "author": 1,
+    "executor": 2
+  },
+  "duplicated": {
+    "name": "Make project",
+    "description": "",
+    "status": 2,
+    "author": 2,
+    "executor": 2
+  },
+  "updated": {
+    "name": "Another name",
+    "description": "I did it",
+    "status": 1,
+    "executor": 2
+  }
+}
+

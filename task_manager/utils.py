@@ -25,3 +25,7 @@ def get_test_user_data():
 def get_test_status_data():
     return get_fixture_data('test_status_data.json')
 
+
+def get_test_task_data():
+    return get_fixture_data('test_task_data.json')
+
