@@ -29,3 +29,7 @@ def get_test_status_data():
 def get_test_task_data():
     return get_fixture_data('test_task_data.json')
 
+
+def get_test_label_data():
+    return get_fixture_data('test_label_data.json')
+

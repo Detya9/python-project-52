@@ -1,0 +1,36 @@
+[
+  {
+    "model": "labels.label",
+    "pk": 1,
+    "fields": {
+      "name": "Work",
+      "created_at": "2025-04-25T13:18:08.477Z"
+    }
+  },
+  {
+    "model": "labels.label",
+    "pk": 2,
+    "fields": {
+      "name": "Study",
+      "created_at": "2025-04-25T13:18:16.775Z"
+    }
+  },
+  {
+    "model": "labels.label",
+    "pk": 3,
+    "fields": {
+      "name": "Money",
+      "created_at": "2025-04-25T13:18:43.421Z"
+    }
+  },
+  {
+    "model": "labels.label",
+    "pk": 4,
+    "fields": {
+      "name": "Urgently",
+      "created_at": "2025-04-25T13:18:54.723Z"
+    }
+  }
+]
+
+
