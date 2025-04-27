@@ -8,7 +8,7 @@ from task_manager.utils import get_test_task_data
 
 
 class TestTaskListView(TestCase):
-    fixtures = ["statuses.json", "users.json", "tasks.json"]
+    fixtures = ["statuses.json", "users.json", "tasks.json", "labels.json"]
     tasks_quantity = 2
 
     def test_list_view_with_not_logged(self):
@@ -26,7 +26,7 @@ class TestTaskListView(TestCase):
 
 
 class TestTaskDetailView(TestCase):
-    fixtures = ["statuses.json", "users.json", "tasks.json"]
+    fixtures = ["statuses.json", "users.json", "tasks.json", "labels.json"]
 
     def test_detail_view_with_not_logged(self):
         response = self.client.get(reverse('task_list'))
@@ -42,7 +42,7 @@ class TestTaskDetailView(TestCase):
 
 
 class TestTaskCreateView(TestCase):
-    fixtures = ["statuses.json", "users.json", "tasks.json"]
+    fixtures = ["statuses.json", "users.json", "tasks.json", "labels.json"]
     tasks_quantity = 2
 
     @classmethod
@@ -72,7 +72,7 @@ class TestTaskCreateView(TestCase):
 
 
 class TestTaskUpdateView(TestCase):
-    fixtures = ["statuses.json", "users.json", "tasks.json"]
+    fixtures = ["statuses.json", "users.json", "tasks.json", "labels.json"]
 
     @classmethod
     def setUpTestData(cls):
@@ -105,7 +105,7 @@ class TestTaskUpdateView(TestCase):
 
 
 class TestTaskDeleteView(TestCase):
-    fixtures = ["statuses.json", "users.json", "tasks.json"]
+    fixtures = ["statuses.json", "users.json", "tasks.json", "labels.json"]
     task_quantity = 2
 
     def test_task_delete_with_not_logged(self):

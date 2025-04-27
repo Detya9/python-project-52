@@ -8,7 +8,7 @@ from task_manager.utils import get_test_task_data
 
 
 class TaskModelTest(TestCase):
-    fixtures = ["statuses.json", "users.json", "tasks.json"]
+    fixtures = ["statuses.json", "users.json", "tasks.json", "labels.json"]
 
     @classmethod
     def setUpTestData(cls):

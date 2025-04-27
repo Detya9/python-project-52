@@ -13,7 +13,7 @@ class TaskFilter(django_filters.FilterSet):
         label=_('Label')
     )
 
-    user_tasks = django_filters.BooleanFilter(
+    self_tasks = django_filters.BooleanFilter(
         label=_('Only your own tasks'),
         method='get_own_tasks',
         widget=CheckboxInput)
