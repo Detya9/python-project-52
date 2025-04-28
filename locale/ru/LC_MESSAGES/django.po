@@ -97,7 +97,7 @@ msgstr "Задачу может удалить только ее автор"
 
 #: task_manager/statuses/views.py:25
 msgid "Status was successfully created"
-msgstr "Cтатус успешно создан"
+msgstr "Статус успешно создан"
 
 #: task_manager/statuses/views.py:26
 #: task_manager/templates/statuses/status_list.html:12
