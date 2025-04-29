@@ -36,5 +36,5 @@ jobs:
         env:
           ALLOWED_HOSTS: "*"
           DATABASE_URL: "postgres://postgres:postgres@localhost:${{ job.services.postgres.ports[5432] }}/postgres"
-          DJANGO_SECRET_KEY: "fake-secret-key-for-tests"
+          SECRET_KEY: "fake-secret-key-for-tests"
 
