@@ -25,18 +25,15 @@ jobs:
         run: |
           pip install uv
           make install
-      - name: Install venv
-        run: |
-          uv python install 3.11
-          uv venv --python 3.11.0
-          uv run --python pypy@3.8 -- python
-      - name: Run migrations
-        run: |
-          python manage.py migrate
       - name: Run linter
         run: |
           make check
       - name: Test coverage
         run: |
+          python manage.py migrate
           make coverage
+        env:
+          ALLOWED_HOSTS: "*"
+          DATABASE_URL: "postgres://postgres:postgres@localhost:${{ job.services.postgres.ports[5432] }}/postgres"
+          DJANGO_SECRET_KEY: "fake-secret-key-for-tests"
 
