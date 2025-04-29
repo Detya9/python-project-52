@@ -9,7 +9,7 @@ build:
 fix:
 	uv run ruff check --fix
 render-start:
-	gunicorn task_manager.wsgi
+	uv run gunicorn task_manager.wsgi
 make_migrations:
 	uv run python manage.py makemigrations
 migrate:
