@@ -1,5 +1,7 @@
 # Task Manager
 [![Actions Status](https://github.com/Detya9/python-project-52/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Detya9/python-project-52/actions)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=Detya9_python-project-52&metric=coverage)](https://sonarcloud.io/summary/new_code?id=Detya9_python-project-52)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=Detya9_python-project-52&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=Detya9_python-project-52)
 ## App's Link
 Click [here](https://python-project-52-zwm5.onrender.com)
 ### Used tools:
