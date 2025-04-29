@@ -31,7 +31,7 @@ jobs:
           make check
       - name: Test coverage
         run: |
-          python manage.py migrate
+          make migrate
           make coverage
         env:
           ALLOWED_HOSTS: "*"
