@@ -24,6 +24,6 @@ test:
 	uv run python manage.py test --keepdb
 coverage:
 	uv run coverage run --source='.' manage.py test task_manager --keepdb
-	uv run coverage html
+	uv run coverage xml
 	uv run coverage report
  
