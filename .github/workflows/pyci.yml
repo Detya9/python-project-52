@@ -29,6 +29,7 @@ jobs:
         run: |
           uv python install 3.11
           uv venv --python 3.11.0
+          uv run --python pypy@3.8 -- python
       - name: Run migrations
         run: |
           python manage.py migrate
