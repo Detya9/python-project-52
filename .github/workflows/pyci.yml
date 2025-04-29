@@ -37,10 +37,6 @@ jobs:
           ALLOWED_HOSTS: "*"
           DATABASE_URL: "postgres://postgres:postgres@localhost:${{ job.services.postgres.ports[5432] }}/postgres"
           SECRET_KEY: "fake-secret-key-for-tests"
-      - name: Install tox and any other packages
-        run: pip install tox
-      - name: Run tox
-        run: tox -e py
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v4
         env:
